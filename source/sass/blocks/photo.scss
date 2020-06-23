@@ -1,0 +1,27 @@
+.photo__title {
+  line-height: 30px;
+}
+
+.photo__list {
+  @include reset-list;
+  padding: 0 20px;
+}
+
+.photo__item {
+  width: 280px;
+}
+
+.photo__text-wrapper {
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .photo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    width: 300px;
+  }
+}

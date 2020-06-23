@@ -1,0 +1,58 @@
+.range-controls {
+  display: none;
+  position: absolute;
+  width: 240px;
+  margin-bottom: 32px;
+
+  &--active {
+    display: block;
+  }
+}
+
+.range-controls__scale {
+  height: 2px;
+
+  background: black;
+}
+
+.range-controls__bar {
+  width: 80%;
+  height: 2px;
+
+  background: black;
+}
+
+.range-controls__toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: black;
+
+  border:  8px solid black;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    left: 80%;
+  }
+}
+
+//.range-controls__toggle:hover {
+//  background: #1c4f80;
+//}
+
+@media (min-width: $tablet-width) {
+  .range-controls {
+    display: block;
+    top: 20px;
+    left: 100px
+  }
+}

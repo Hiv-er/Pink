@@ -1,0 +1,128 @@
+.intro {
+  background-color: $blue-dark;
+
+  &--inner {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("../../img/bg-back-mobile@1x.jpg");
+
+    min-height: 246px;
+  }
+}
+
+.intro__bg {
+  background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%, 0 0;
+  min-height: 395px;
+}
+
+.intro__wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 25px 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 30px;
+  display: none;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: normal;
+  color: $white;
+
+  &--inner {
+    margin: 0 auto;
+    padding-bottom: 100px;
+    display: block;
+    width: 280px;
+
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 300;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.intro__button {
+  margin-bottom: 25px;
+}
+
+.intro__available {
+  margin: 0;
+
+  font-weight: 300;
+  color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 65% 100%, 0 0;
+
+    &--inner {
+      min-height: 328px;
+    }
+  }
+
+  .intro__wrapper {
+    width: 660px;
+    padding: 195px 332px 100px 20px;
+  }
+
+  .intro__title {
+    display: block;
+
+    &--inner {
+      width: 620px;
+
+      font-size: 50px;
+    }
+  }
+
+  .intro__bg {
+    display: none;
+  }
+
+  .intro__button {
+    margin-bottom: 40px;
+  }
+
+  .intro__available {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+
+    &--inner {
+      min-height: 390px;
+    }
+  }
+
+  .intro__title {
+    margin-bottom: 55px;
+    font-size: 50px;
+
+    &--inner {
+      padding-top: 170px;
+      width: 940px;
+    }
+  }
+
+  .intro__button {
+    margin-bottom: 65px;
+  }
+
+  .intro__wrapper {
+    width: 960px;
+    padding: 195px 647px 100px 10px;
+  }
+
+}

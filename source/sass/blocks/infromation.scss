@@ -1,0 +1,193 @@
+.information {
+  padding-top: 40px;
+
+  text-align: center;
+}
+
+.information__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 300px;
+}
+
+.information__effect {
+  display: none;
+}
+
+.information__bg-grey-wrapper {
+  background-image: url("../../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: $grey;
+}
+
+.information__header {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 300;
+}
+
+.information__list {
+  @include reset-list;
+  padding-top: 100px;
+}
+
+.information__item {
+  margin-bottom: 25px;
+
+  &--friends {
+    margin-bottom: 0;
+    padding-bottom: 320px;
+    background-image: url("../../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% 150px;
+  }
+}
+
+.information__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.information__description {
+  margin: 0;
+}
+
+.information__link {
+  color: $pink;
+  text-decoration: underline;
+}
+
+
+@media (min-width: $tablet-width) {
+  .information {
+    padding-top: 50px;
+  }
+
+  .information__wrapper {
+    width: 660px;
+
+    &--features {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .information__header {
+    font-size: 40px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  .information__list {
+    padding-top: 70px;
+
+    text-align: left;
+  }
+
+  .information__item {
+    margin-bottom: 30px;
+    padding-left: 310px;
+
+    &--friends {
+      padding-bottom: 0;
+      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-position: left bottom;
+    }
+  }
+
+  .information__effect {
+    display: block;
+    padding-top: 95px;
+    padding-bottom: 100px;
+    padding-left: 310px;
+
+    text-align: left;
+  }
+
+  .information__effect-title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+
+  .information__effect-description {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .information {
+    padding-top: 70px;
+  }
+
+  .information__wrapper {
+    width: 960px;
+    padding: 0 10px;
+
+    &--features {
+      display: block;
+    }
+  }
+
+  .information__header {
+    font-size: 50px;
+
+    &:last-child {
+      margin-bottom: 70px;
+    }
+  }
+
+  .information__list {
+    padding-top: 350px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .information__item {
+    padding: 0;
+    width: 250px;
+  }
+
+  .information__title {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .information__description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .information__bg-grey-effect-wrapper {
+    background-color: $grey;
+  }
+
+  .information__effect {
+    padding-left: 370px;
+  }
+
+  .information__effect-title {
+    font-size: 30px;
+  }
+
+  .information__link {
+    font-size: 18px;
+  }
+}

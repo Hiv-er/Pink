@@ -1,0 +1,14 @@
+.icon-list {
+  @include reset-list;
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .icon-list {
+    margin-bottom: 35px;
+  }
+}

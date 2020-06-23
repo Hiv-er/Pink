@@ -1,0 +1,45 @@
+.editor__title {
+  display: none;
+}
+
+.editor__icon {
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+    fill: $pink;
+  }
+}
+
+.editor__option {
+  position: relative;
+}
+
+.editor__button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.editor__options-wrapper {
+  display: flex;
+}
+
+@media (min-width: $tablet-width) {
+  .editor__wrapper {
+    display: flex;
+  }
+
+  .editor__icon {
+
+    &--active {
+      opacity: 0.3;
+      fill: inherit;
+    }
+  }
+
+  .editor__options-wrapper {
+    flex-direction: column;
+  }
+
+}

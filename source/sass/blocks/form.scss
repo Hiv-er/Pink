@@ -1,0 +1,366 @@
+.form {
+  margin: 0 auto;
+}
+
+.form__fieldset {
+  margin: 0 20px;
+  padding: 0;
+  padding-bottom: 40px;
+  border: none;
+
+  &--contacts form__fieldset-title {
+    display: none;
+  }
+}
+
+.form__bg-grey {
+  padding-top: 35px;
+  margin-bottom: 40px;
+  background-color: $grey;
+}
+
+.form__fieldset-title {
+  display: block;
+  margin-bottom: 35px;
+
+  line-height: 18px;
+  color: $pink;
+  text-transform: uppercase;
+}
+
+.form__field-list {
+  @include reset-list;
+  text-align: left;
+}
+
+.form__field-item__flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input-text-label {
+  margin-left: 20px;
+  margin-bottom: 5px;
+
+  line-height: 30px;
+  color: $pink;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.form__field-item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__input-text {
+  padding: 15px 20px;
+
+  border: 2px solid $grey-table;
+
+  width: 100%;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  outline: none;
+
+  &:hover {
+    border-color: black;
+  }
+
+  &:focus {
+    border-color: $pink;
+  }
+
+  &::placeholder {
+    color: $blue-dark;
+  }
+}
+
+.form__input-checkbox {
+  &:checked ~ .form__input-checkbox-label::after {
+    content: "";
+
+    position: absolute;
+    left: 10px;
+    top: 3px;
+
+    width: 22px;
+    height: 29px;
+
+    background-image: url("../../img/icon-check.svg");
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    cursor: pointer;
+  }
+
+  &:hover ~ .form__input-checkbox-label::before,
+  &:focus ~ .form__input-checkbox-label::before {
+    border-color: $black;
+  }
+
+  &:active ~ .form__input-checkbox-label::before {
+    border-color: $pink;
+  }
+
+}
+
+.form__input-radio {
+
+  &:checked ~ .form__input-radio-label::after {
+    content: "";
+
+    position: absolute;
+    left: 14px;
+    top: 5px;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+    background-color: $pink;
+    z-index: 2;
+  }
+
+  &:hover ~ .form__input-radio-label::before,
+  &:focus ~ .form__input-radio-label::before {
+    border-color: $black;
+  }
+
+  &:active ~ .form__input-radio-label::before {
+    border-color: $pink;
+  }
+}
+
+.form__input-checkbox-label,
+.form__input-radio-label {
+  padding-left: 62px;
+  position: relative;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: -9px;
+
+    width: 38px;
+    height: 38px;
+
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    z-index: 1;
+  }
+}
+
+.form__input-radio-label {
+
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.form__textarea {
+  padding: 15px 20px;
+  width: 100%;
+  min-height: 200px;
+
+  border: 2px solid $grey-table;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  outline: none;
+
+  resize: vertical;
+
+  &:hover {
+    border-color: black;
+  }
+
+  &:focus {
+    border-color: $pink;
+  }
+}
+
+.form__button {
+  margin-bottom: 35px;
+}
+
+.form__about-required {
+  display: block;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+
+  & sup {
+    color: $pink;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__bg-grey {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .form__fieldset {
+    margin-bottom: 50px;
+    padding: 0 60px 50px 60px;
+    border: 2px solid $grey-table;
+
+    &--fio {
+      padding: 0;
+
+      order: 1;
+      border: none;
+    }
+
+    &--contacts {
+      order: 3;
+    }
+
+    &--emotions {
+      order: 5;
+    }
+
+    &--last {
+      order: 6;
+    }
+  }
+
+  .form__achievement-block {
+    order: 4;
+  }
+
+  .form__app-block {
+    order: 2;
+  }
+
+  .form__fieldset-title {
+    padding: 0 20px;
+    background-color: $white;
+  }
+
+  .form__field-item {
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 50px;
+  }
+
+  .form__fieldset--contacts .form__field-item {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .form__fieldset--contacts .form__field-item .form__input-text-label {
+    margin-left: 20px;
+    margin-top: 5px;
+    order: 2;
+  }
+
+  .form__input-text-label {
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .form__input-contacts-wrapper {
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 2px;
+      right: 2px;
+
+      width: 60px;
+      height: 60px;
+
+      background-color: $grey-table;
+    }
+  }
+
+  .form__fieldset--last .feedback__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__button {
+    margin-bottom: 0;
+  }
+
+
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    width: 960px;
+    //padding: 0 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__achievement-block {
+    flex-basis: 100%;
+  }
+
+  .form__app-block {
+    flex-basis: 435px;
+  }
+
+  .form__fieldset {
+    flex-basis: 100%;
+
+    &--fio {
+      padding-top: 20px;
+      flex-basis: 435px;
+    }
+
+    &--contacts {
+      padding-bottom: 40px;
+    }
+  }
+
+  .form__fieldset--achievement {
+    padding-bottom: 0;
+  }
+
+  .form__fieldset--contacts .form__field-list,
+  .form__fieldset--achievement .form__field-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form__fieldset--achievement .form__field-item {
+    width: 30%;
+  }
+
+  .form__fieldset--contacts .form__field-item {
+    margin-bottom: 0;
+    width: 45%;
+  }
+}

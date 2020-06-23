@@ -1,0 +1,43 @@
+.page-header {
+  position: absolute;
+
+  width: 100%;
+
+  background-color: $black-opacity;
+
+  &--non-transparent {
+    position: static;
+    background-color: $blue-dark;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $black;
+}
+
+.page-header__wrapper {
+  padding: 0 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    background-color: $black-opacity;
+
+    &--non-transparent {
+      position: absolute;
+      background-color: $black-opacity;
+    }
+  }
+
+  .page-header__wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+  }
+}

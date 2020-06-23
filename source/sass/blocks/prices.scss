@@ -1,0 +1,178 @@
+.prices {
+  padding: 130px 0 40px 0;
+  background-color: $grey;
+  background-image: url("../../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.prices__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.prices__table {
+  width: 816px;
+  border-collapse: collapse;
+
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+.prices__header {
+  position: relative;
+  padding: 16px 20px;
+
+  line-height: 30px;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $blue-dark;
+
+  box-sizing: border-box;
+
+  &--empty {
+    display: none;
+  }
+
+  &--hit::before {
+    content: url("../../img/bg-hit.png");
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.prices__header:nth-child(3) {
+  border-left: 2px solid $grey-table;
+  border-right: 2px solid $grey-table;
+}
+
+.prices__header-title {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.prices__header-cost {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.prices__field {
+  padding: 16px 20px;
+  position: relative;
+
+  border: 2px solid $grey-table;
+  border-top: none;
+
+  background-color: $white;
+
+  line-height: 30px;
+  text-transform: uppercase;
+
+  box-sizing: border-box;
+
+  &--first {
+    display: none;
+  }
+
+  &--x::after,
+  &--tick::after {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+  }
+
+  &--x::after {
+    content: url("../../img/icon-no.svg");
+  }
+
+  &--tick::after {
+    content: url("../../img/icon-yes.svg");
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .prices__table {
+    width: 620px;
+
+    transform: translateX(0);
+  }
+
+  .prices__header {
+
+    &--empty {
+      display: inline-block;
+      background-color: transparent;
+    }
+
+    &--hit::before {
+      content: url("../../img/bg-hit-tablet.png");
+    }
+  }
+
+  .prices__header-title {
+    font-size: 16px;
+  }
+
+  .prices__header-cost {
+    font-size: 18px;
+  }
+
+  .prices__field {
+    font-size: 0;
+
+    text-transform: none;
+
+    &--first {
+      display: table-cell;
+
+      font-size: 14px;
+    }
+
+    &--x::after,
+    &--tick::after {
+      right: 50%;
+
+      transform: translateX(50%);
+    }
+  }
+
+  .prices__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .prices__table {
+    width: 940px;
+  }
+
+  .prices__header-title {
+    font-size: 18px;
+  }
+
+  .prices__header-cost {
+    font-size: 24px;
+  }
+
+  .prices__field {
+    font-size: 0;
+
+    text-transform: none;
+
+    &--first {
+      font-size: 18px;
+    }
+  }
+}
+
