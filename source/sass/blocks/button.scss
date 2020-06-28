@@ -61,6 +61,48 @@
       opacity: 0.3;
     }
   }
+
+  &--editor-submit {
+    width: 280px;
+
+    border: 3px solid $pink;
+
+    font-weight: 700;
+    color: $pink;
+
+    &:hover,
+    &:focus {
+      background-color: $pink;
+      color: $white
+    }
+
+    &:active {
+      color: $white-opacity;
+    }
+  }
+
+  &--editor-cancel {
+    width: 280px;
+
+    border: 3px solid $blue-dark;
+
+    font-weight: 700;
+    color: $blue-dark;
+
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: $blue-dark;
+      color: $white-opacity;
+      opacity: 0.3;
+    }
+  }
+
 }
 
 @media (min-width: $tablet-width) {
@@ -68,6 +110,15 @@
     &--download,
     &--form {
       width: 300px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--editor-submit,
+    &--editor-cancel {
+      width: 180px;
     }
   }
 }

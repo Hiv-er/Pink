@@ -1,27 +1,183 @@
+.photo {
+  margin-bottom: 40px;
+}
+
 .photo__title {
+  margin: 0;
+  padding: 45px 0;
+  font-size: 14px;
   line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.photo__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 320px;
+}
+
+.photo__main {
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .photo__list {
   @include reset-list;
-  padding: 0 20px;
 }
 
 .photo__item {
+  margin-bottom: 20px;
   width: 280px;
+
+  line-height: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.photo__image {
+  display: block;
+
+  &--main {
+    width: 100%;
+  }
+}
+
+.photo__image-text {
+  padding: 5px 20px;
+
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  background-color: $pink;
+
+  font-size: 12px;
+  color: $white;
+  text-transform: uppercase;
 }
 
 .photo__text-wrapper {
-  padding: 0 20px;
+  padding: 20px;
+
+  background-color: $grey;
+}
+
+.photo__author {
+  font-weight: 700;
+}
+
+.photo__time-ago {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photo__description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.photo__likes-button {
+  margin-right: 15px;
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.photo__likes-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.photo__likes-button svg {
+  fill: $pink;
+}
+
+.photo__likes {font-size: 12px;
+  color: $pink;
+  text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
+  .photo__wrapper {
+    width: 660px;
+  }
+
+  .photo__title {
+    padding: 80px 0;
+
+    font-size: 18px;
+  }
+
+  .photo__main {
+    margin-bottom: 45px;
+  }
+
+  .photo__main .photo__text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .photo__main .photo__description {
+    width: 100%;
+    order: 3;
+  }
+
+  .photo__main .photo__likes-button {
+    margin-left: 20px;
+  }
+
+  .photo__likes-button {
+    order: 2;
+  }
+
+  .photo__image-text {
+    top: 55px;
+  }
+
   .photo__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .photo__item {
     width: 300px;
+  }
+
+  .photo__text-wrapper {
+    padding: 25px 30px;
+  }
+
+  .photo__item .photo__likes-wrapper {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__wrapper {
+    padding: 0 10px;
+    width: 960px;
+  }
+
+  .photo__title {
+    padding: 95px 0;
+  }
+
+  .photo__main {
+    margin-bottom: 50px;
+  }
+
+  .photo__image-text {
+    top: 60px;
+  }
+
+  .photo__item {
+    margin-bottom: 55px;
   }
 }

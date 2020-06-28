@@ -2,7 +2,6 @@
   display: none;
   position: absolute;
   width: 240px;
-  margin-bottom: 32px;
 
   &--active {
     display: block;
@@ -15,44 +14,37 @@
   background: black;
 }
 
-.range-controls__bar {
-  width: 80%;
-  height: 2px;
-
-  background: black;
-}
-
 .range-controls__toggle {
   position: absolute;
-  top: -9px;
+  top: -7px;
+  left: 50%;
 
-  width: 4px;
-  height: 4px;
+  width: 15px;
+  height: 15px;
 
-  background: black;
+  background-color: $grey;
 
-  border:  8px solid black;
+  border:  2px solid $pink;
   border-radius: 50%;
-  box-shadow: 0 2px 1px rgba(0, 1, 1, 0.2);
+
   cursor: pointer;
 
-  &--min {
-    left: 0;
-  }
-
-  &--max {
-    left: 80%;
+  &:active {
+    background-color: $pink;
   }
 }
-
-//.range-controls__toggle:hover {
-//  background: #1c4f80;
-//}
 
 @media (min-width: $tablet-width) {
   .range-controls {
     display: block;
-    top: 20px;
-    left: 100px
+    position: relative;
+
+    width: 200px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range-controls {
+    width: 290px;
   }
 }
