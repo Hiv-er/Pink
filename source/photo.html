@@ -10,8 +10,11 @@
     <header class="page-header page-header--non-transparent">
         <div class="page-header__wrapper">
             <a class="page-header__logo" href="index.html">
-                <img src="img/logo-pink-white-mobile.svg" class="page-header__logo-image" width="75px" height="22px"
-                     alt="Pink">
+                <picture>
+                    <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                    <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                    <img src="img/logo-pink-white-mobile.svg" class="page-header__logo-image" alt="Pink">
+                </picture>
             </a>
             <nav class="main-nav main-nav--closed main-nav--nojs">
                 <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -32,11 +35,16 @@
 
         <section class="photo">
             <div class="photo__wrapper">
-                <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не
+                <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! <br>Видите, как не
                 хватает ваших?</h2>
             </div>
             <div class="photo__main">
-                <img src="img/panorama-mobile@1x.jpg" class="photo__image photo__image--main" alt="Фото пользователя">
+                <picture>
+                    <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                    <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" class="photo__image photo__image--main"
+                        alt="Фото пользователя">
+                </picture>
                 <span class="photo__image-text">Панорама дня</span>
                 <div class="photo__wrapper">
                     <div class="photo__text-wrapper">
@@ -65,7 +73,12 @@
             <div class="photo__wrapper">
                 <ul class="photo__list">
                     <li class="photo__item">
-                        <img src="img/photo-1-mobile@1x.jpg" class="photo__image" alt="Фото пользователя">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                            <source media="(min-width: 660px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                            <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" class="photo__image"
+                                 alt="Фото пользователя">
+                        </picture>
                         <div class="photo__text-wrapper">
                             <div class="photo__author-wrapper">
                                 <span class="photo__author">Анна</span>
@@ -92,7 +105,12 @@
                         </div>
                     </li>
                     <li class="photo__item">
-                        <img src="img/photo-1-mobile@1x.jpg" class="photo__image" alt="Фото пользователя">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                            <source media="(min-width: 660px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                            <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" class="photo__image"
+                                 alt="Фото пользователя">
+                        </picture>
                         <div class="photo__text-wrapper">
                             <div class="photo__author-wrapper">
                                 <span class="photo__author">Анна</span>
@@ -119,7 +137,12 @@
                         </div>
                     </li>
                     <li class="photo__item">
-                        <img src="img/photo-1-mobile@1x.jpg" class="photo__image" alt="Фото пользователя">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                            <source media="(min-width: 660px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                            <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" class="photo__image"
+                                 alt="Фото пользователя">
+                        </picture>
                         <div class="photo__text-wrapper">
                             <div class="photo__author-wrapper">
                                 <span class="photo__author">Анна</span>
@@ -146,7 +169,12 @@
                         </div>
                     </li>
                     <li class="photo__item">
-                        <img src="img/photo-1-mobile@1x.jpg" class="photo__image" alt="Фото пользователя">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                            <source media="(min-width: 660px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                            <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" class="photo__image"
+                                 alt="Фото пользователя">
+                        </picture>
                         <div class="photo__text-wrapper">
                             <div class="photo__author-wrapper">
                                 <span class="photo__author">Анна</span>
@@ -183,7 +211,12 @@
             <div class="editor__container">
                 <div class="editor__wrapper">
                     <div class="editor__photo-wrapper">
-                        <img class="editor__photo" src="img/photo-7-mobile@1x.jpg" width="280" height="374">
+                        <picture>
+                            <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
+                            <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+                            <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" class="photo__image"
+                                 alt="Фото пользователя">
+                        </picture>
                     </div>
                     <div class="editor__column-wrapper">
                         <div class="editor__options-wrapper">

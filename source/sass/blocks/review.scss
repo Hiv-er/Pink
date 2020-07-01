@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+.review__quotes-icon {
+  display: none;
+}
+
 .review__list {
   margin-bottom: 35px;
 }
@@ -36,14 +40,13 @@
   line-height: 30px;
 }
 
-.review__prev,
-.review__next {
+.review__arrow {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
   .review__wrapper {
-    padding: 180px 10px 40px 10px;
+    padding: 45px 20px 40px 20px;
     width: 660px;
   }
 
@@ -77,12 +80,20 @@
 
 @media (min-width: $desktop-width) {
   .review__wrapper {
+    padding: 70px 10px 40px 10px;
     width: 960px;
+  }
+
+  .review__quotes-icon {
+    margin-bottom: 50px;
+    display: inline-block;
+    fill: $grey;
   }
 
   .review__list {
     margin: 0 auto;
-    width: 700px;
+    padding: 0 125px;
+    position: relative;
   }
 
   .review__author {
@@ -99,5 +110,37 @@
 
   .review__toggles {
     display: none;
+  }
+
+  .review__arrow {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  .review__arrow svg {
+    fill: $grey-dark;
+
+    &:hover,
+    &:focus {
+      fill: #7e868f;
+    }
+
+    &:active {
+      fill: #e9ebec;
+    }
   }
 }

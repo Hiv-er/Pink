@@ -7,10 +7,6 @@
   padding: 0;
   padding-bottom: 40px;
   border: none;
-
-  &--contacts form__fieldset-title {
-    display: none;
-  }
 }
 
 .form__bg-grey {
@@ -272,10 +268,14 @@
     align-items: start;
   }
 
-  .form__fieldset--contacts .form__field-item .form__input-text-label {
+  .form__fieldset--contacts .form__input-text-label {
     margin-left: 20px;
     margin-top: 5px;
     order: 2;
+  }
+
+  .form__fieldset--contacts .form__input-text {
+    padding-right: 70px;
   }
 
   .form__input-text-label {
@@ -301,6 +301,18 @@
     }
   }
 
+  .form__icon {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+
+    z-index: 2;
+
+    & path {
+      fill: $pink;
+    }
+  }
+
   .form__fieldset--last .feedback__wrapper {
     display: flex;
     justify-content: space-between;
@@ -317,7 +329,6 @@
 @media (min-width: $desktop-width) {
   .form {
     width: 960px;
-    //padding: 0 10px;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
