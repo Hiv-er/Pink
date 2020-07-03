@@ -307,10 +307,7 @@
     right: 20px;
 
     z-index: 2;
-
-    & path {
-      fill: $pink;
-    }
+    fill: $pink;
   }
 
   .form__fieldset--last .feedback__wrapper {

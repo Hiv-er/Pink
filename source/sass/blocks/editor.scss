@@ -7,6 +7,8 @@
   text-align: center;
 }
 
+
+
 .editor__title-wrapper,
 .editor__photo-wrapper,
 .editor__options-wrapper,
@@ -14,6 +16,10 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 320px;
+}
+
+.editor__photo-wrapper {
+  margin-bottom: 20px;
 }
 
 .editor__container {
@@ -150,10 +156,6 @@
     height: 22px;
 
     fill: $pink;
-
-    &--contrast path {
-      fill: $pink;
-    }
   }
 
   .editor__button--active .editor__icon {

@@ -13,9 +13,9 @@
   margin-bottom: 40px;
 }
 
-.page-footer__logo-icon:hover {
+.page-footer__logo-icon {
 
-  &:hover path {
+  &:hover {
     fill: $pink;
   }
 
